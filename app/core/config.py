@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     PASSWORD_MIN_LENGTH: int = 8
 
     # CORS — set exact origins in production, never "*"
-   ALLOWED_ORIGINS: str = "http://localhost:8081"
+    # ALLOWED_ORIGINS: str = "http://localhost:8081"
 
     # MongoDB
     MONGO_URL: str = "mongodb://localhost:27017"
