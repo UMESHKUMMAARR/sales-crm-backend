@@ -3,7 +3,7 @@ Central configuration — all settings from environment variables.
 Never hardcode secrets. Use .env locally, platform env vars in production.
 """
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import Optional
 import secrets
 
 
@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     PASSWORD_MIN_LENGTH: int = 8
 
     # CORS — set exact origins in production, never "*"
-    ALLOWED_ORIGINS: List[str] = ["http://localhost:8081", "http://localhost:19006"]
+   ALLOWED_ORIGINS: str = "http://localhost:8081"
 
     # MongoDB
     MONGO_URL: str = "mongodb://localhost:27017"
